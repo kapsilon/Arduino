@@ -21,5 +21,8 @@ $RECYCLE.BIN/
 # Windows Executables
 *.exe
 
+#VS Code Settings
+.vscode/
+
 # Tasks
 ```*
