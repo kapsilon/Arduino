@@ -33,7 +33,7 @@ void loop() {
 		setRGB(red, green, blue);
 	}
 
-	// DEBUG on Board, set 9600 at serial Monitor
+	// DEBUG on Board, set 9600 at Serial Monitor
 	Serial.println(red);
 	Serial.println(green);
 	Serial.println(blue);
