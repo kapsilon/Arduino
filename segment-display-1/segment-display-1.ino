@@ -43,25 +43,33 @@ void loop() {
 	delay(500);
 	digitalWrite(G, HIGH);
 	delay(500);
-	refresh();
+	refreshDisplay();
 
 	// Set Numbers to Light
 	for (int i = 0; i <= 9; i++) {
 		displayDigit(i);
 		delay(1000);
-		refresh();
+		refreshDisplay();
 	}
 
 	// Refresh Display
-	refresh();
+	refreshDisplay();
 }
 
 // Turn On Segments by Numbers 0-9
 void displayDigit(int digit) {
 	// Turn Off All Segments
-	refresh();
+	refresDisplay();
 
 	// Turn On Segments by Number
+	/* 		A
+		   ---
+		F |   | B
+		  | G |
+		   ---
+		E |   | C
+		  | D |
+		   ---    */
 	if (digit == 1) {
 		digitalWrite(B, HIGH);
 		digitalWrite(C, HIGH);
@@ -134,7 +142,7 @@ void displayDigit(int digit) {
 }
 
 // Turn Off All Segments
-void refresh() {
+void refreshDisplay() {
 	digitalWrite(A, LOW);
 	digitalWrite(B, LOW);
 	digitalWrite(C, LOW);
