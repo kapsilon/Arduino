@@ -27,8 +27,9 @@ const int D3 = DISPLAY_PIN_10;
 const int D4 = DISPLAY_PIN_07;
 
 // Set Variables for loop
-int number;
+int number = 0;
 int counter = 0;
+unsigned long timer;
 
 // Include Library for 4-Digit 7-Segment Display Using
 #include "SevSeg.h"
@@ -57,26 +58,30 @@ void setup() {
 	bool updateWithDelaysIn = true;
 	byte hardwareConfig = COMMON_CATHODE;
 	// SevenSegment Library Settings Turn On
-	sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins,
-				 resistorsOnSegments);
+	sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
 	sevseg.setBrightness(90);
 }
 
 void loop() {
 	// Get 1111,2222...9999 Every Second
-	number = (div(millis(), 1000)).quot * 1111;
-	// Zeroing by Cycle
-	number = number - 9999 * counter;
-	// Set 0000 for 0
-	if (number == 0) {
-		number = 0000;
+	// Via millis
+	if (millis() - timer > 1000) {
+		timer = millis();
+		number += 1111;
 	}
-	// Set zeroing for cycle
-	if (number == 9999) {
-		counter += 1;
+
+	// Zeroing by Cycle
+	if (number > 9999) {
+		number -= 9999;
 	}
 
 	// Show Digits
-	sevseg.setNumber(number, 0);
+	if (number == 0) {
+		// Set 0000 for 0
+		sevseg.setNumber(0000, 0);
+	} else {
+		// Show Number
+		sevseg.setNumber(number, 0);
+	}
 	sevseg.refreshDisplay();
 }
