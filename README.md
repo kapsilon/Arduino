@@ -9,6 +9,8 @@ Playing with Arduino Mega 2560
 
 **Buzzer Music**
 
+**Distance Meter**
+
 **Joystick**
 
 **LCD Screen**
@@ -28,3 +30,4 @@ Playing with Arduino Mega 2560
 **Termo Sensor**
 
 **Water Sensor**
+
