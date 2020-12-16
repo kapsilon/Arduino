@@ -29,5 +29,7 @@ Playing with Arduino Mega 2560
 
 **Termo Sensor**
 
+**Theremin**
+
 **Water Sensor**
 
