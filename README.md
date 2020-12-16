@@ -21,6 +21,8 @@ Playing with Arduino Mega 2560
 
 **RGB Rainbow**
 
+**Rolling Dice**
+
 **Segment Display 1 Digit**
 
 **Segment Display 4 Digits**
