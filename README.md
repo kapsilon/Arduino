@@ -27,6 +27,8 @@ Playing with Arduino Mega 2560
 
 **Servo**
 
+**Stepper**
+
 **Termo Module**
 
 **Termo Sensor**
