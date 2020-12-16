@@ -25,6 +25,8 @@ Playing with Arduino Mega 2560
 
 **Segment Display 4 Digits**
 
+**Servo**
+
 **Termo Module**
 
 **Termo Sensor**
