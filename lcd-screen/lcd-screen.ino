@@ -11,6 +11,13 @@ const int D7_PIN = 11;
 LiquidCrystal lcd(RS_PIN, EN_PIN, D4_PIN, D5_PIN, D6_PIN, D7_PIN);
 
 void setup() {
+	pinMode(RS_PIN, OUTPUT);
+	pinMode(EN_PIN, OUTPUT);
+	pinMode(D4_PIN, OUTPUT);
+	pinMode(D5_PIN, OUTPUT);
+	pinMode(D6_PIN, OUTPUT);
+	pinMode(D7_PIN, OUTPUT);
+
 	// Set LCD Screen's number of Columns and Rows:
 	lcd.begin(16, 2);
 }
