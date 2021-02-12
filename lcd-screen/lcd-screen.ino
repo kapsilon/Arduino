@@ -23,13 +23,62 @@ void setup() {
 }
 
 void loop() {
+	delay(2000);
 	// Print to First Line
-	lcd.print("Hello!");
+	lcd.setCursor(4, 0);
+	lcd.print("HELLO!");
 	delay(5000);
 	// Print to Second Line
-	lcd.setCursor(2, 1);
-	lcd.print("You're Super!!!");
+	lcd.setCursor(0, 1);
+	lcd.print("You are Super!!!");
 	delay(5000);
+	// Clear Display
+	lcd.clear();
 
+	// Cursor
+	// Cursor ON
+	lcd.cursor();
+	// Moving Cursor
+	for (int i = 0; i < 15; i++) {
+		lcd.setCursor(i, 0);
+		delay(450);
+	}
+	// Cursor OFF
+	lcd.noCursor();
+	lcd.clear();
+
+	// Blinking Cursor
+	// Blink ON
+	lcd.blink();
+	// Moving Cursor
+	for (int i = 0; i < 15; i++) {
+		lcd.setCursor(i, 1);
+		delay(450);
+	}
+	// Blink OFF
+	lcd.noBlink();
+	lcd.clear();
+
+	// Scroll (40 Maximum)
+	lcd.print("Scroll 40 Positions StringLength to Left");
+	for (int i = 0; i < 41; i++) {
+		// Scroll One Position to Left:
+		lcd.scrollDisplayLeft();
+		delay(400);
+	}
+	lcd.clear();
+
+	// AutScroll (25 Maximum)
+	lcd.setCursor(16, 1);
+	// AutScrolling ON
+	lcd.autoscroll();
+	String autoscroll = "AutoScroll String toLeft";
+	for (int i = 0; i < autoscroll.length(); i++) {
+		lcd.print(autoscroll[i]);
+		delay(300);
+	}
+	delay(5000);
+	// AutScrolling OFF
+	lcd.noAutoscroll();
 	lcd.clear();
 }
