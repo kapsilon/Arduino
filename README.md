@@ -15,6 +15,8 @@ Playing with Arduino Mega 2560
 
 **LCD Screen**
 
+**LCD Screen Adapter**
+
 **LED Matrix**
 
 **RGB Blink**
@@ -30,6 +32,10 @@ Playing with Arduino Mega 2560
 **Servo**
 
 **Stepper**
+
+**Termo Meter**
+
+![](termo-meter/termo-meter.png)
 
 **Termo Module**
 
