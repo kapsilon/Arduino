@@ -85,7 +85,7 @@ void setup() {
 	// SevenSegment Library Settings Turn On
 	sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins,
 				 resistorsOnSegments);
-	sevseg.setBrightness(900);
+	sevseg.setBrightness(90);
 
 	// Set Battery Clock Pins to Output Mode
 	pinMode(BATTERY_VCC, OUTPUT);
