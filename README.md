@@ -3,13 +3,13 @@ Playing with Arduino Mega 2560
 
 
 
-### Devices
+### 				Devices
 
-**[00 Blank](/blank/)**
+**[00 Blank](/blank\/)**
 
-**01 RGB Blink**
+**[01 RGB Blink](/rgb-blink)**
 
-**02 RGB Rainbow**
+**[02 RGB Rainbow](https://github.com/kapsilon/Arduino/tree/main/rgb-rainbow)**
 
 **03 Buzzer**
 
@@ -53,7 +53,9 @@ Playing with Arduino Mega 2560
 
 
 
-### Projects
+
+
+### 				Projects
 
 **Buzzer Music**
 
@@ -61,6 +63,6 @@ Playing with Arduino Mega 2560
 
 **Theremin**
 
-**Termo Meter**
+**[Termo Meter](/termo-meter/README.md)**
 
 **ESP WiFi + ESP Arduino**
